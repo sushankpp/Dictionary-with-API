@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dictionary</title>
+  </head>
+
+  <body  id="body">
+    <header>
+      <div class="page-title">
+        <img
+          src="images/dictionary-logo.png"
+          alt="dictionary-logo"
+          class="dictionary-logo"
+        />
+        <a href="index.html">Dictionary</a>
+      </div>
+      <div class="theme-toggler" >
+        <p class="white">White</p>
+        <input type="checkbox" class="checkbox" id="theme-checkbox" />
+        <div class="toggler" id="toggler">
+          <span class="ball"></span>
+        </div>
+        <p class="dark">Dark</p>
+      </div>
+    </header>
+
+    <div class="search-word">
+      <input
+        type="text"
+        class="search-input"
+        id="search-input"
+        placeholder="search for a word"
+      />
+      <button class="search-btn" id="search-btn">
+        <img
+          src="images/search-icon.svg"
+          alt="search-icon"
+          class="search-icon"
+        />
+      </button>
+    </div>
+    <main class="main-container" id="main-container"></main>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>

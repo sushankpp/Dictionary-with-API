@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+:root {
+  --Dark-Blue: hsl(209, 23%, 22%);
+  --Very-Dark-Blue: hsl(207, 26%, 17%);
+  --Very-Dark-Blue: hsl(200, 15%, 8%);
+  --Dark-Gray: hsl(0, 0%, 52%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --font-family: 'Nunito Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  font-family: var(--font-family);
+  background: #fff;
+  transition: background 0.2s linear;
+}
+
+main {
+  margin: 0 10rem;
+}
+
+body.dark h1, body.dark li{
+  color: var(--white);
+}
+
+body.dark {
+  background-color: #292c35;
+  color: var(--white);
+}
+
+
+body.dark .search-input{
+  background-color: var(--Dark-Gray);
+  color: #fff;
+  border: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 48px;
+  color: var(--Very-Dark-Blue);
+}
+
+.page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Dark-Blue);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.dictionary-logo {
+  width: 100%;
+  height: 100px;
+  padding-right: 1em;
+  aspect-ratio: 16/9;
+}
+
+.theme-toggler {
+  display: flex;
+  position: relative;
+}
+
+.checkbox {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  left: 3rem;
+  height: 20px;
+  width: 50px;
+}
+
+.toggler {
+  cursor: pointer;
+  width: 50px;
+  height: 22px;
+  background-color: var(--Dark-Blue);
+  border-radius: 50px;
+  border: none;
+  margin: 0 0.5rem;
+}
+
+.ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+  border: none;
+}
+
+.checkbox:checked ~ .toggler .ball {
+  transform: translateX(28px);
+}
+
+.white {
+  color: var(--Dark-Gray);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.dark {
+  color: var(--Very-Dark-Blue);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.search-input {
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid var(--Very-Light-Gray);
+  color: var(--Very-Dark-Blue);
+  font-size: 20px;
+  padding: 1rem;
+  background-color: var(--Very-Light-Gray);
+  padding-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+.search-input:focus-within {
+  outline: none;
+}
+
+.search-word {
+  margin-left: 10rem;
+}
+
+.search-btn {
+  cursor: pointer;
+  width: 3%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  position: relative;
+  top: 0.5rem;
+  left: -3rem;
+}
+
+.phonetic {
+  color: rgb(147, 25, 147);
+  padding: 0.5rem 0;
+}
+
+.keymeaning {
+  display: flex;
+  justify-content: space-between;
+}
+
+section{
+  display: block;
+  transition: display 0.3s linear;
+}
+
+.audio {
+  cursor: pointer;
+  width: 10%;
+  height: 50px;
+  position: relative;
+  top: -3.3rem;
+  opacity: 0;
+  left: 0.5rem;
+  border-radius: 50px;
+}
+
+.play-audio {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  border-radius: 50px;
+  height: 50px;
+  padding: 1rem;
+  background-color: rgb(240, 189, 240);
+}
+
+.part-of-speech::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 90%;
+  height: 2px;
+  background-color: var(--Dark-Gray);
+  top: -0.2rem;
+  left: 1rem;
+}
+
+.verb::after {
+  content: '';
+  left: 1.4rem;
+}
+
+.text {
+  text-transform: capitalize;
+  font-size-adjust: 13px;
+  color: var(--Dark-Gray);
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+
+ul {
+  margin-bottom: 1.3rem;
+}
+
+li {
+  color: var(--Dark-Blue);
+  font-size: 18px;
+  padding: 0.4rem;
+}
+
+.synonyms {
+  font-size: 18px;
+  color: rgb(165, 165, 93);
+  font-size: 500;
+  margin-bottom: 1rem;
+}
+
+span {
+  font-size: 20px;
+  color: rgb(179, 153, 103);
+  font-weight: 700;
+}
+
+
+
+@media only screen and (max-width:700px){
+  header{
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+
+
+  main{
+    margin: 0 3rem;
+  }
+
+  .search-word{
+    margin-left: 3rem;
+  }
+
+  .search-icon{
+    height: 32px;
+  }
+
+  .audio-section{
+    padding-left: 7rem;
+  }
+
+  .audio{
+    left: 1rem;
+  }
+
+  .play-audio{
+    width: 50%;
+  }
+
+
+  .part-of-speech::after{
+    left: 0;
+    width: 100%;
+  }
+}
